@@ -1,0 +1,36 @@
+body {
+  margin: 290px; /* Establece un margen de 290 píxeles en todos los lados del cuerpo del documento */
+  background-color: black; /* Establece el color de fondo del cuerpo del documento en negro */
+}
+
+.grid-container {
+  display: grid; /* Activa el diseño de cuadrícula para el contenedor con clase "grid-container" */
+  grid-template-areas:
+    "header header header" /* Crea una fila llamada "header" con tres columnas iguales */
+    "sidebar main main" /* Crea una fila llamada "sidebar" y dos filas llamadas "main" con tres columnas iguales */
+    "sidebar footer footer"; /* Crea una fila llamada "sidebar" y dos filas llamadas "footer" con tres columnas iguales */
+  grid-template-columns: 1fr 2fr 2fr; /* Establece tres columnas, la primera tiene un ancho flexible y las dos siguientes tienen el doble de ancho que la primera */
+  grid-template-rows: auto 1fr auto; /* Establece tres filas, la primera se ajusta al contenido, la segunda ocupa el espacio restante y la tercera se ajusta al contenido */
+  grid-gap: 10px; /* Establece un espacio de 10 píxeles entre las celdas de la cuadrícula */
+}
+
+.item {
+  padding: 20px; /* Establece un relleno interno de 20 píxeles en todos los lados del elemento con clase "item" */
+  background-color: #ccc; /* Establece el color de fondo de los elementos con clase "item" en un tono de gris claro */
+}
+
+.item-a {
+  grid-area: header; /* Coloca el elemento con clase "item-a" en el área designada como "header" en la cuadrícula */
+}
+
+.item-b {
+  grid-area: sidebar; /* Coloca el elemento con clase "item-b" en el área designada como "sidebar" en la cuadrícula */
+}
+
+.item-c {
+  grid-area: main; /* Coloca el elemento con clase "item-c" en el área designada como "main" en la cuadrícula */
+}
+
+.item-d {
+  grid-area: footer; /* Coloca el elemento con clase "item-d" en el área designada como "footer" en la cuadrícula */
+}
